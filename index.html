@@ -11,7 +11,9 @@
     <div class="header">
         <h1> My Book Library</h1>
         <p>This is My Book Library which presents the books that
-             i have read or those which i am planning to read. <br>
+             i have read or those which i am planning to read.
+        </p>
+        <p>
             Also you can find information about the Author of the Book, the Title
             of the Book and also how many pages it has
         </p>
@@ -19,38 +21,53 @@
 
     <div class="add-book-section">
         <form action="">
-            <div class="form-element">
-                <label for="name">Book</label>
-                <input type="text" name="Book" id="name">
+            <div class="grid-container">
+                <div class="form-element">
+                    <label for="name">Book</label>
+                    <input type="text" name="Book" id="name">
+                </div>
+
+                <div class="form-element">
+                    <label for="author">Author</label>
+                    <input type="text" name="Author" id="author">
+                </div>
+
+                <div class="form-element">
+                    <label for="pages">Pages</label>
+                    <input type="number" name="Pages-Number" id="pages">
+                </div>
+
+                <div class="form-element">
+                    <label for="status">Status</label>
+                    <select name="status" id="status">
+                        <option value="read">Read</option>
+                        <option value="not read">Not read</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-element">
-                <label for="author">Author</label>
-                <input type="text" name="Author" id="author">
-            </div>
-
-            <div class="form-element">
-                <label for="pages">Pages</label>
-                <input type="number" name="Pages-Number" id="pages">
-            </div>
-
-            <div class="form-element">
-                <label for="status">Status</label>
-                <select name="status" id="status">
-                    <option value="read">Read</option>
-                    <option value="not read">Not read</option>
-                </select>
-            </div>
-
-            <input type="submit" value="submit" class="submit-button">
-
-
+            <input type="submit" value="SUBMIT" class="submit-button">
 
         </form>
 
     </div>
 
     <div class="book-list-section">
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            
+            <tbody id="table-body-item"></tbody>
+
+
+
+        </table>
 
     </div>
 
